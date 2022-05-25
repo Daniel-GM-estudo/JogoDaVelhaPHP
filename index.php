@@ -28,15 +28,15 @@ for($play = 1; $play == 1;){
     );
 
     //escolha do primeiro a jogar
-    for($i = 0; $i == 0;){
+    for($i = 0; $i == 0;){    
         $start = readline("Digite 1 para ". ucfirst($player) . " começar e 2 para a Maquina começar: ");
-        if($simbolo == '1' || $simbolo == '2')
+        if($start == '1' || $start == '2')
             $i = 1;
     }
 
     //primeira jogada da maquina caso ela comece
     if($start == 2){
-        for($verifica=false; $verifica == true;){
+        for($verifica=false; $verifica !== true;){
             $verifica = verificaPosicao($tabuleiro, maquinaJoga(), $simbolo_maquina);
         }
     }
@@ -46,14 +46,21 @@ for($play = 1; $play == 1;){
 
         imprimeTabuleiro($tabuleiro);
 
-        for($verifica=false; $verifica == true;){
+        for($verifica=false; $verifica !== true;){
             $action = readline(ucfirst($player) . " escolha uma posição: ");
-            $verifica = verificaPosicao($tabuleiro, $action, $simbolo);
+            if($tabuleiro[$action-1] == "-"){
+                $tabuleiro[$action-1] = $simbolo;
+                $verifica = true;
+            }
         }
-
+        $ganhador = verificaTabuleiro($tabuleiro, $simbolo);
     }
+    imprimeTabuleiro($tabuleiro);
 
-
+    $resposta = readline("FIM DE JOGO! Deseja jogar novamente? (s/n)");
+    if($resposta == 'n'){
+        $play = 0;
+    }
 
 }
 
