@@ -10,12 +10,12 @@
 
 # Imprimir o tabuleiro. V
 
-# Começar o jogo.
+# Começar o jogo. V
 
-# Perder ou empatar.
+# Maquina jogar.
 
-# Escolher finalizar ou jogar de novo.
+# Perder ou empatar. 
 
-# Se "jogar de novo" saber se é para usar o mesmo simbolo ou voltar para a opção "2".
+# Escolher finalizar ou jogar de novo. V
 
-# Se "finalizar" fechar o game.
+# Se "finalizar" fechar o game. V
