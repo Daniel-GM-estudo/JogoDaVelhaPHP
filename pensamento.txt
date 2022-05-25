@@ -1,0 +1,21 @@
+# Tela de "Iniciar jogo". V
+
+# Escolher seu "nick". V
+
+# Escolher o simbolo "x" ou "o". V
+
+# Salvar o simbolo. V
+
+# Escolher quem começa. V
+
+# Imprimir o tabuleiro. V
+
+# Começar o jogo.
+
+# Perder ou empatar.
+
+# Escolher finalizar ou jogar de novo.
+
+# Se "jogar de novo" saber se é para usar o mesmo simbolo ou voltar para a opção "2".
+
+# Se "finalizar" fechar o game.
