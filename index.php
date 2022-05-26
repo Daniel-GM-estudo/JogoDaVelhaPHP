@@ -4,6 +4,7 @@ require_once("imprimeTabuleiro.php");
 require_once("maquinaJoga.php");
 require_once("verificaTabuleiro.php");
 require_once("verificaPosicao.php");
+require_once("trocaJogador.php");
 
 for($play = 1; $play == 1;){
 
@@ -37,9 +38,15 @@ for($play = 1; $play == 1;){
     //primeira jogada da maquina caso ela comece
     if($start == 2){
         for($verifica=false; $verifica !== true;){
-            $verifica = verificaPosicao($tabuleiro, maquinaJoga(), $simbolo_maquina);
+            $action = maquinaJoga();
+            if($tabuleiro[$action-1] == "-"){
+                $tabuleiro[$action-1] = $simbolo_maquina;
+                $verifica = true;
+            }
         }
+        $start = trocaJogador($start);
     }
+    
     
     //loop do game
     for($ganhador=0; $ganhador === 0;){
@@ -47,17 +54,24 @@ for($play = 1; $play == 1;){
         imprimeTabuleiro($tabuleiro);
 
         for($verifica=false; $verifica !== true;){
-            $action = readline(ucfirst($player) . " escolha uma posição: ");
+            if($start == 1) {
+                $action = readline(ucfirst($player) . " escolha uma posição: ");
+                $simbolo_tabuleiro = $simbolo;
+            }
+            else if($start = 2){
+                $action = maquinaJoga();
+                $simbolo_tabuleiro = $simbolo_maquina;
+            }
             if($tabuleiro[$action-1] == "-"){
-                $tabuleiro[$action-1] = $simbolo;
+                $tabuleiro[$action-1] = $simbolo_tabuleiro;
                 $verifica = true;
             }
         }
-        $ganhador = verificaTabuleiro($tabuleiro, $simbolo);
+        $ganhador = verificaTabuleiro($tabuleiro, $simbolo_tabuleiro, $simbolo);
+        $start = trocaJogador($start);
     }
-    imprimeTabuleiro($tabuleiro);
-
-    $resposta = readline("FIM DE JOGO! Deseja jogar novamente? (s/n)");
+    
+    $resposta = readline(" - Deseja jogar novamente? (s/n)");
     if($resposta == 'n'){
         $play = 0;
     }

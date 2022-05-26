@@ -12,7 +12,7 @@
 
 # Começar o jogo. V
 
-# Maquina jogar.
+# Maquina jogar. v
 
 # Perder ou empatar. 
 
