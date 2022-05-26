@@ -1,10 +1,6 @@
 <?php
 
-require_once("imprimeTabuleiro.php");
-require_once("maquinaJoga.php");
-require_once("verificaTabuleiro.php");
-require_once("verificaPosicao.php");
-require_once("trocaJogador.php");
+require_once("config.php");
 
 for($play = 1; $play == 1;){
 
