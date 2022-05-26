@@ -1,0 +1,35 @@
+# PROJETO #
+
+- UM JOGO DA VELHA ONDE A MAQUINA NUNCA PERDE.
+
+
+# REGRAS DO JOGO #
+
+- O DESAFIANTE PODE ESCOLHER O SIMBOLO DE SUA PREFERENCIA
+
+- O DESAFIANTE PODE ESCOLHER ENTRE COMEÇAR OU DEIXAR A MAQUINA COMEÇAR
+
+- O MAQUINA DEVE TER APENAS DOIS RESULTADOS VALIDOS: VITORIA OU EMPATE
+
+
+# DESENVOLVIMENTO DO PROJETO #
+
+# "Iniciar jogo". V
+
+# Escolher seu "nick". V
+
+# Escolher o simbolo "x" ou "o". V
+
+# Escolher quem começa. V
+
+# Imprimir o tabuleiro. V
+
+# Começar o jogo. V
+
+# Maquina jogar para não perder.
+
+# Maquina ganhar ou empatar. 
+
+# Escolher finalizar ou jogar de novo. V
+
+# Se "finalizar" fechar o game. V
